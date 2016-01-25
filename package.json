@@ -1,0 +1,15 @@
+{
+  "name": "thousandstars",
+  "version": "1.0.0",
+  "description": "Every github repo over 1000 stars",
+  "main": "getPopularRepositories.js",
+  "dependencies": {
+    "github": "^0.2.4",
+    "tingodb": "^0.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Garvan",
+  "license": "MIT"
+}
