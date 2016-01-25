@@ -27,7 +27,7 @@ fs.readFile('./processing/index.tmpl.html', 'utf8', function(err, template) {
 					      <td>**created**</td> 
 					      <td>**description**</td> 
 					    </tr>`
-					    .replace('**url**', repo.url)
+					    .replace('**url**', repo.html_url)
 					    .replace('**name**', repo.name)
 					    .replace('**stars**', repo.stargazers_count)
 					    .replace('**created**', createdStr)

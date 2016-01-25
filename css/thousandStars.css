@@ -1,14 +1,21 @@
+.repoTable {
+	table-layout: fixed;
+}
 .nameCol {
 	width: 10em;
+	word-wrap: break-word;
 }
 
 .starsCol {
-	width: 6em;
+	width: 10em;
+	word-wrap: break-word;
 }
 
 .createdCol {
-	width: 6em;
+	width: 10em;
+	word-wrap: break-word;
 }
 
 .descriptionCol {
+	word-wrap: break-word;
 }
