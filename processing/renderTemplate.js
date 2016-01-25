@@ -29,7 +29,7 @@ fs.readFile('./processing/index.tmpl.html', 'utf8', function(err, template) {
 					    </tr>`
 					    .replace('**url**', repo.html_url)
 					    .replace('**name**', repo.name)
-					    .replace('**stars**', repo.stargazers_count)
+					    .replace('**stars**', repo.stargazers_count.toLocaleString())
 					    .replace('**created**', createdStr)
 					    .replace('**description**', repo.description);
 		});
