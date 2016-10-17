@@ -6,7 +6,7 @@ var github = new GitHubApi({
       host: "api.github.com",
       timeout: 5000,
       headers: {
-          "user-agent": "checklistomania" 
+          "user-agent": "checklistomania"
       }
   });
 
@@ -26,11 +26,11 @@ var getRepos = function(min, max, page) {
 	console.log('page: ' + page);
 	var query = 'stars:"' + min + ' .. ' + max + '"';
 	console.log(query);
-	github.search.repos({q: query, per_page: 100, page: page}, 
+	github.search.repos({q: query, per_page: 100, page: page},
 	function(err, data) {
 		if (err) {console.log(err); setTimeout(function() {
 			getRepos(min, max, page);
-		}, 65000)} 
+		}, 65000)}
 		else {
 			if(data.total_count > 1000) {console.log("ERROR: MAX LIMIT REACHED");}
 			else {
@@ -44,7 +44,7 @@ var getRepos = function(min, max, page) {
 				} else {
 					var diff = max - min;
 					min = max;
-					max = max + Math.floor(diff*1.4);
+					max = max + Math.floor(diff*1.2);
 
 					if(max > 10000) {max = 1000000}
 					if(min < 1000000) {
